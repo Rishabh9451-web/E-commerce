@@ -1,0 +1,107 @@
+/* Custom Animations */
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Notification Animation */
+
+.notification-enter {
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification-exit {
+    animation: slideIn 0.3s ease-out reverse;
+}
+
+
+/* Mobile Menu Animation */
+
+#mobile-menu:not(.hidden) {
+    animation: fadeIn 0.3s ease-out;
+}
+
+
+/* Search Overlay Animation */
+
+#search-overlay:not(.hidden) {
+    animation: fadeIn 0.3s ease-out;
+}
+
+
+/* Product Card Hover Effects */
+
+.product-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Utility Classes */
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+
+/* Mobile-specific styles */
+
+@media (max-width: 768px) {
+    .fixed-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 40;
+    }
+}
